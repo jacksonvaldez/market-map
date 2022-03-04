@@ -1,0 +1,310 @@
+current directory: /Users/jacksonvaldez/Turing/3module/market-map/vendor/bundle/ruby/2.7.0/gems/ruby-fann-1.3.2/ext/ruby_fann
+/Users/jacksonvaldez/.rbenv/versions/2.7.2/bin/ruby -I /Users/jacksonvaldez/.rbenv/versions/2.7.2/lib/ruby/2.7.0 -r ./siteconf20220304-36182-1jn354s.rb extconf.rb
+checking for doublefann.h... yes
+creating Makefile
+
+current directory: /Users/jacksonvaldez/Turing/3module/market-map/vendor/bundle/ruby/2.7.0/gems/ruby-fann-1.3.2/ext/ruby_fann
+make "DESTDIR=" clean
+
+current directory: /Users/jacksonvaldez/Turing/3module/market-map/vendor/bundle/ruby/2.7.0/gems/ruby-fann-1.3.2/ext/ruby_fann
+make "DESTDIR="
+compiling ruby_fann.c
+In file included from ruby_fann.c:5:
+./fann_augment.h:85:9: warning: format specifies type 'int' but the argument has type 'long' [-Wformat]
+                                        i, RARRAY_LEN(inputs_i), num_input);
+                                           ^~~~~~~~~~~~~~~~~~~~
+/Users/jacksonvaldez/.rbenv/versions/2.7.2/include/ruby-2.7.0/ruby/ruby.h:1070:23: note: expanded from macro 'RARRAY_LEN'
+#define RARRAY_LEN(a) rb_array_len(a)
+                      ^~~~~~~~~~~~~~~
+In file included from ruby_fann.c:5:
+./fann_augment.h:93:9: warning: format specifies type 'int' but the argument has type 'long' [-Wformat]
+                                        i, RARRAY_LEN(outputs_i), num_output);
+                                           ^~~~~~~~~~~~~~~~~~~~~
+/Users/jacksonvaldez/.rbenv/versions/2.7.2/include/ruby-2.7.0/ruby/ruby.h:1070:23: note: expanded from macro 'RARRAY_LEN'
+#define RARRAY_LEN(a) rb_array_len(a)
+                      ^~~~~~~~~~~~~~~
+In file included from ruby_fann.c:5:
+./fann_augment.h:24:30: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+    unsigned int num_input = RARRAY_LEN(RARRAY_PTR(inputs)[0]);
+                 ~~~~~~~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jacksonvaldez/.rbenv/versions/2.7.2/include/ruby-2.7.0/ruby/ruby.h:1070:23: note: expanded from macro 'RARRAY_LEN'
+#define RARRAY_LEN(a) rb_array_len(a)
+                      ^~~~~~~~~~~~~~~
+In file included from ruby_fann.c:5:
+./fann_augment.h:25:30: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+    unsigned int num_output =RARRAY_LEN(RARRAY_PTR(outputs)[0]);
+                 ~~~~~~~~~~  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jacksonvaldez/.rbenv/versions/2.7.2/include/ruby-2.7.0/ruby/ruby.h:1070:23: note: expanded from macro 'RARRAY_LEN'
+#define RARRAY_LEN(a) rb_array_len(a)
+                      ^~~~~~~~~~~~~~~
+In file included from ruby_fann.c:5:
+./fann_augment.h:26:27: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+                unsigned int num_data = RARRAY_LEN(inputs);
+                             ~~~~~~~~   ^~~~~~~~~~~~~~~~~~
+/Users/jacksonvaldez/.rbenv/versions/2.7.2/include/ruby-2.7.0/ruby/ruby.h:1070:23: note: expanded from macro 'RARRAY_LEN'
+#define RARRAY_LEN(a) rb_array_len(a)
+                      ^~~~~~~~~~~~~~~
+ruby_fann.c:307:33: warning: incompatible integer to pointer conversion passing 'VALUE' (aka 'unsigned long') to parameter of type 'void *' [-Wint-conversion]
+        fann_set_user_data(ann, self);
+                                ^~~~
+./fann.h:544:72: note: passing argument to parameter 'user_data' here
+FANN_EXTERNAL void FANN_API fann_set_user_data(struct fann *ann, void *user_data);
+                                                                       ^
+ruby_fann.c:281:60: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+        unsigned int num_layers=RARRAY_LEN(hidden_neurons) + 2; 
+                     ~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+ruby_fann.c:290:20: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+        for (i=1; i<=num_layers-2; i++) {
+                  ~^ ~~~~~~~~~~~~
+ruby_fann.c:695:16: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    for (i=0; i<num_layers; i++)
+              ~^~~~~~~~~~~
+ruby_fann.c:807:16: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    for (i=0; i<num_layers; i++)
+              ~^~~~~~~~~~~
+ruby_fann.c:845:13: warning: variable 'ret_val' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+    else if(net_type==FANN_NETTYPE_SHORTCUT)
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ruby_fann.c:849:12: note: uninitialized use occurs here
+    return ret_val;
+           ^~~~~~~
+ruby_fann.c:845:10: note: remove the 'if' if its condition is always true
+    else if(net_type==FANN_NETTYPE_SHORTCUT)
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ruby_fann.c:836:18: note: initialize the variable 'ret_val' to silence this warning
+    VALUE ret_val;
+                 ^
+                  = 0
+ruby_fann.c:922:13: warning: variable 'ret_val' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+    else if(train_error==FANN_ERRORFUNC_TANH)
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ruby_fann.c:926:12: note: uninitialized use occurs here
+    return ret_val;
+           ^~~~~~~
+ruby_fann.c:922:10: note: remove the 'if' if its condition is always true
+    else if(train_error==FANN_ERRORFUNC_TANH)
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ruby_fann.c:913:18: note: initialize the variable 'ret_val' to silence this warning
+    VALUE ret_val;
+                 ^
+                  = 0
+ruby_fann.c:975:15: warning: variable 'ret_val' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+    } else if(fann_train_algorithm==FANN_TRAIN_QUICKPROP) {
+              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ruby_fann.c:978:12: note: uninitialized use occurs here
+    return ret_val;
+           ^~~~~~~
+ruby_fann.c:975:12: note: remove the 'if' if its condition is always true
+    } else if(fann_train_algorithm==FANN_TRAIN_QUICKPROP) {
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ruby_fann.c:964:18: note: initialize the variable 'ret_val' to silence this warning
+    VALUE ret_val;
+                 ^
+                  = 0
+ruby_fann.c:1020:13: warning: variable 'ret_val' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+    else if(train_stop==FANN_STOPFUNC_BIT)
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ruby_fann.c:1024:12: note: uninitialized use occurs here
+    return ret_val;
+           ^~~~~~~
+ruby_fann.c:1020:10: note: remove the 'if' if its condition is always true
+    else if(train_stop==FANN_STOPFUNC_BIT)
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ruby_fann.c:1011:18: note: initialize the variable 'ret_val' to silence this warning
+    VALUE ret_val;
+                 ^
+                  = 0
+ruby_fann.c:1073:24: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+    unsigned int len = RARRAY_LEN(inputs);
+                 ~~~   ^~~~~~~~~~~~~~~~~~
+/Users/jacksonvaldez/.rbenv/versions/2.7.2/include/ruby-2.7.0/ruby/ruby.h:1070:23: note: expanded from macro 'RARRAY_LEN'
+#define RARRAY_LEN(a) rb_array_len(a)
+                      ^~~~~~~~~~~~~~~
+ruby_fann.c:1075:16: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    for (i=0; i<len; i++)
+              ~^~~~
+ruby_fann.c:1089:16: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    for (i=0; i<output_len; i++)
+              ~^~~~~~~~~~~
+ruby_fann.c:1127:30: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+    unsigned int num_input = RARRAY_LEN(input);
+                 ~~~~~~~~~   ^~~~~~~~~~~~~~~~~
+/Users/jacksonvaldez/.rbenv/versions/2.7.2/include/ruby-2.7.0/ruby/ruby.h:1070:23: note: expanded from macro 'RARRAY_LEN'
+#define RARRAY_LEN(a) rb_array_len(a)
+                      ^~~~~~~~~~~~~~~
+ruby_fann.c:1128:31: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+    unsigned int num_output = RARRAY_LEN(expected_output);
+                 ~~~~~~~~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jacksonvaldez/.rbenv/versions/2.7.2/include/ruby-2.7.0/ruby/ruby.h:1070:23: note: expanded from macro 'RARRAY_LEN'
+#define RARRAY_LEN(a) rb_array_len(a)
+                      ^~~~~~~~~~~~~~~
+ruby_fann.c:1134:19: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    for (i = 0; i < num_input; i++) {
+                ~ ^ ~~~~~~~~~
+ruby_fann.c:1138:19: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    for (i = 0; i < num_output; i++) {
+                ~ ^ ~~~~~~~~~~
+ruby_fann.c:1428:24: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+    unsigned int cnt = RARRAY_LEN(cascade_activation_functions);
+                 ~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jacksonvaldez/.rbenv/versions/2.7.2/include/ruby-2.7.0/ruby/ruby.h:1070:23: note: expanded from macro 'RARRAY_LEN'
+#define RARRAY_LEN(a) rb_array_len(a)
+                      ^~~~~~~~~~~~~~~
+ruby_fann.c:1431:16: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    for (i=0; i<cnt; i++)
+              ~^~~~
+ruby_fann.c:1453:16: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    for (i=0; i<cnt; i++)
+              ~^~~~
+ruby_fann.c:1492:24: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+    unsigned int cnt = RARRAY_LEN(cascade_activation_steepnesses);
+                 ~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jacksonvaldez/.rbenv/versions/2.7.2/include/ruby-2.7.0/ruby/ruby.h:1070:23: note: expanded from macro 'RARRAY_LEN'
+#define RARRAY_LEN(a) rb_array_len(a)
+                      ^~~~~~~~~~~~~~~
+ruby_fann.c:1495:16: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    for (i=0; i<cnt; i++)
+              ~^~~~
+ruby_fann.c:1517:16: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    for (i=0; i<cnt; i++)
+              ~^~~~
+ruby_fann.c:1581:5: warning: incompatible function pointer types passing 'VALUE (VALUE, VALUE)' (aka 'unsigned long (unsigned long, unsigned long)') to parameter of type 'VALUE (*)(VALUE)' (aka 'unsigned long (*)(unsigned long)') [-Wincompatible-function-pointer-types]
+    rb_define_method(m_rb_fann_standard_class, "get_neurons", get_neurons, 0);  
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jacksonvaldez/.rbenv/versions/2.7.2/include/ruby-2.7.0/ruby/ruby.h:2799:117: note: expanded from macro 'rb_define_method'
+#define rb_define_method(klass, mid, func, arity) rb_define_method_choose_prototypem3((arity),(func))((klass),(mid),(func),(arity));
+                                                                                                                    ^~~~~~
+/Users/jacksonvaldez/.rbenv/versions/2.7.2/include/ruby-2.7.0/ruby/ruby.h:2775:1: note: passing argument to parameter 'func' here
+RB_METHOD_DEFINITION_DECL(rb_define_method, (2,3), (VALUE klass, const char *name), (klass, name))
+^
+/Users/jacksonvaldez/.rbenv/versions/2.7.2/include/ruby-2.7.0/ruby/intern.h:1073:42: note: expanded from macro 'RB_METHOD_DEFINITION_DECL'
+RB_METHOD_DEFINITION_DECL_CXX_BEGIN(def) \
+                                         ^
+/Users/jacksonvaldez/.rbenv/versions/2.7.2/include/ruby-2.7.0/ruby/intern.h:1069:5: note: expanded from macro '\
+RB_METHOD_DEFINITION_DECL_1'
+    RB_METHOD_DEFINITION_DECL_C(def,nonnull,defname,decl,vars,funcargs) \
+    ^
+/Users/jacksonvaldez/.rbenv/versions/2.7.2/include/ruby-2.7.0/ruby/intern.h:1042:118: note: expanded from macro 'RB_METHOD_DEFINITION_DECL_C'
+    __attribute__((__unused__,__weakref__(#def),__nonnull__ nonnull))static void defname(RB_UNWRAP_MACRO decl,VALUE(*func)funcargs,int arity);
+                                                                                                                     ^
+ruby_fann.c:1681:5: warning: incompatible function pointer types passing 'VALUE (VALUE, VALUE)' (aka 'unsigned long (unsigned long, unsigned long)') to parameter of type 'VALUE (*)(VALUE)' (aka 'unsigned long (*)(unsigned long)') [-Wincompatible-function-pointer-types]
+    rb_define_method(m_rb_fann_shortcut_class, "get_neurons", get_neurons, 0);  
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jacksonvaldez/.rbenv/versions/2.7.2/include/ruby-2.7.0/ruby/ruby.h:2799:117: note: expanded from macro 'rb_define_method'
+#define rb_define_method(klass, mid, func, arity) rb_define_method_choose_prototypem3((arity),(func))((klass),(mid),(func),(arity));
+                                                                                                                    ^~~~~~
+/Users/jacksonvaldez/.rbenv/versions/2.7.2/include/ruby-2.7.0/ruby/ruby.h:2775:1: note: passing argument to parameter 'func' here
+RB_METHOD_DEFINITION_DECL(rb_define_method, (2,3), (VALUE klass, const char *name), (klass, name))
+^
+/Users/jacksonvaldez/.rbenv/versions/2.7.2/include/ruby-2.7.0/ruby/intern.h:1073:42: note: expanded from macro 'RB_METHOD_DEFINITION_DECL'
+RB_METHOD_DEFINITION_DECL_CXX_BEGIN(def) \
+                                         ^
+/Users/jacksonvaldez/.rbenv/versions/2.7.2/include/ruby-2.7.0/ruby/intern.h:1069:5: note: expanded from macro '\
+RB_METHOD_DEFINITION_DECL_1'
+    RB_METHOD_DEFINITION_DECL_C(def,nonnull,defname,decl,vars,funcargs) \
+    ^
+/Users/jacksonvaldez/.rbenv/versions/2.7.2/include/ruby-2.7.0/ruby/intern.h:1042:118: note: expanded from macro 'RB_METHOD_DEFINITION_DECL_C'
+    __attribute__((__unused__,__weakref__(#def),__nonnull__ nonnull))static void defname(RB_UNWRAP_MACRO decl,VALUE(*func)funcargs,int arity);
+                                                                                                                     ^
+29 warnings generated.
+compiling doublefann.c
+In file included from doublefann.c:25:
+./fann.c:146:93: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+        ann->num_output = (ann->last_layer - 1)->last_neuron - (ann->last_layer - 1)->first_neuron - 1;
+                        ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+./fann.c:147:82: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+        ann->num_input = ann->first_layer->last_neuron - ann->first_layer->first_neuron - 1;
+                       ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+./fann.c:167:68: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+                num_neurons_out = layer_it->last_neuron - layer_it->first_neuron - 1;
+                                ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+./fann.c:271:69: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+                        num_neurons_out = layer_it->last_neuron - layer_it->first_neuron - 1;
+                                        ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+./fann.c:272:80: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+                        num_neurons_in = (layer_it - 1)->last_neuron - (layer_it - 1)->first_neuron - 1;
+                                       ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+./fann.c:443:55: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+        ann->num_output = (ann->last_layer - 1)->last_neuron - (ann->last_layer - 1)->first_neuron;
+                        ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./fann.c:444:82: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+        ann->num_input = ann->first_layer->last_neuron - ann->first_layer->first_neuron - 1;
+                       ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+./fann.c:465:43: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+                num_neurons_out = layer_it->last_neuron - layer_it->first_neuron;
+                                ~ ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+./fann.c:836:48: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+    unsigned int num_layers = orig->last_layer - orig->first_layer;
+                 ~~~~~~~~~~   ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+./fann.c:953:49: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+        layer_size = orig_layer_it->last_neuron - orig_layer_it->first_neuron;
+                   ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./fann.c:989:52: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+    layer_size = (orig->last_layer-1)->last_neuron - (orig->last_layer-1)->first_neuron;
+               ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./fann.c:1012:45: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+        input_neuron = orig->connections[i] - orig_first_neuron;
+                     ~ ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+./fann.c:1156:22: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+                ann->total_neurons - (ann->num_input + ann->num_output +
+                ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./fann.c:1313:28: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+    return ann->last_layer - ann->first_layer;
+    ~~~~~~ ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+./fann.c:1321:52: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+        unsigned int count = layer_it->last_neuron - layer_it->first_neuron;
+                     ~~~~~   ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+./fann.c:1397:75: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+                connections->from_neuron = ann->connections[source_index] - first_neuron;
+                                         ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+./fann.c:1726:39: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+                num_neurons = layer_it->last_neuron - layer_it->first_neuron;
+                            ~ ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from doublefann.c:26:
+./fann_io.c:615:5: warning: taking address of packed member 'activation_steepness' of class or structure 'fann_neuron' may result in an unaligned pointer value [-Waddress-of-packed-member]
+                        &neuron_it->activation_steepness) != 3)
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./fann_io.c:564:82: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+        ann->num_input = ann->first_layer->last_neuron - ann->first_layer->first_neuron - 1;
+                       ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+./fann_io.c:565:56: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+        ann->num_output = ((ann->last_layer - 1)->last_neuron - (ann->last_layer - 1)->first_neuron);
+                        ~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./fann_io.c:741:82: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+        ann->num_input = ann->first_layer->last_neuron - ann->first_layer->first_neuron - 1;
+                       ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+./fann_io.c:742:56: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+        ann->num_output = ((ann->last_layer - 1)->last_neuron - (ann->last_layer - 1)->first_neuron);
+                        ~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from doublefann.c:29:
+./fann_error.c:116:15: warning: passing an object that undergoes default argument promotion to 'va_start' has undefined behavior [-Wvarargs]
+        va_start(ap, errno_f);
+                     ^
+./fann_error.c:93:71: note: parameter of type 'const enum fann_errno_enum' is declared here
+void fann_error(struct fann_error *errdat, const enum fann_errno_enum errno_f, ...)
+                                                                      ^
+In file included from doublefann.c:30:
+./fann_cascade.c:331:40: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+                        num_neurons = layer_it->last_neuron - layer_it->first_neuron;
+                                    ~ ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+./fann_cascade.c:345:106: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+        unsigned int bias_weight = first_con + (ann->first_layer->last_neuron - ann->first_layer->first_neuron) - 1;
+                     ~~~~~~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+./fann_cascade.c:784:24: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+        int layer_pos = layer - ann->first_layer;
+            ~~~~~~~~~   ~~~~~~^~~~~~~~~~~~~~~~~~
+./fann_cascade.c:785:54: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+        int num_layers = ann->last_layer - ann->first_layer + 1;
+            ~~~~~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+./fann_cascade.c:845:56: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+        unsigned int num_connections_in = layer->first_neuron - ann->first_layer->first_neuron;
+                     ~~~~~~~~~~~~~~~~~~   ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./fann_cascade.c:847:38: warning: implicit conversion loses integer precision: 'long' to 'unsigned int' [-Wshorten-64-to-32]
+                (ann->last_layer - 1)->last_neuron - (layer + 1)->first_neuron;
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+29 warnings generated.
+linking shared-object ruby_fann.bundle
+
+current directory: /Users/jacksonvaldez/Turing/3module/market-map/vendor/bundle/ruby/2.7.0/gems/ruby-fann-1.3.2/ext/ruby_fann
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 ruby_fann.bundle ./.gem.20220304-36182-ypc219
