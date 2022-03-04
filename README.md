@@ -1,4 +1,4 @@
-# MarketMap: A Turing 2110 BE Mod 3 Consultancy Project
+# MarketMap: A Turing 2110 BE Mod 3 Consultancy Projectt
 
 ![languages](https://img.shields.io/github/languages/top/Turing-MarketMap/market-map?color=red)
 ![PRs](https://img.shields.io/github/issues-pr-closed/Turing-MarketMap/market-map)
